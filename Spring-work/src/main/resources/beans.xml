@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	 http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.2.xsd"
+	>
+<!-- 设置全局default-init-method="start"
+	default-destroy-method="stop" -->
+	
+	
+	
+	
+	<bean id="HelloworldService" class="cn.com.taiji.spring_framwork.service.HelloworldService">
+		<property name="name" value="yangye"/>
+		<!-- <constructor-arg type="String" value="constructor"></constructor-arg> -->
+	</bean>
+	<bean id="lifeBean" class="cn.com.taiji.spring_framwork.bean.LifeBean" init-method="start" destroy-method="stop"></bean>
+	
+	<bean id="aotherBean" class="cn.com.taiji.spring_framwork.bean.AnotherBean">
+		<property name="name" value="aoherBean"></property>
+	</bean>
+	<bean id="otherBean" class="cn.com.taiji.spring_framwork.bean.OtherBean">
+		<property name="name" value="other"></property>
+	</bean>
+	<bean id="exampleBean" class="cn.com.taiji.spring_framwork.bean.ExampleBean">
+		<property name="anotherBean" ref="aotherBean"></property>
+		<property name="otherBean" ref="otherBean"></property>
+		<property name="i" value="333"></property>
+		<constructor-arg type="anotherBean" ref="aotherBean"></constructor-arg>
+		<constructor-arg type="otherBean" ref="otherBean"></constructor-arg>
+		<constructor-arg type="int" value="867"></constructor-arg>
+	</bean>
+</beans>

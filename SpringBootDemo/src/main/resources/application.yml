@@ -1,0 +1,36 @@
+yy:
+  name: YEGE
+  age: 777
+  number: ${random.int[100,999]}
+  uuid: ${random.uuid}
+
+server:
+  port: 8081
+
+    
+management:
+  security:
+    enabled: true  #关掉安全认证
+  port: 8888   #管理端口调整为8888
+  context-path: /aaa    #actuator的访问路径
+  
+
+#配置安全
+security:
+  user:
+    name:  admin
+    password: admin 
+
+ #配置端点   
+endpoints:
+  actuator:
+    enabled: true
+  shutdown:
+    enabled: true
+    
+
+    
+    
+    
+    
+    

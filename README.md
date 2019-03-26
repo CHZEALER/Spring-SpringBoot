@@ -99,6 +99,7 @@ public class SampleConfig {
 }
 ```
 # SpringBoot
+...
 运行springboot项目
 	ide运行
 	mvn package打包后，在target目录下java -jar运行
@@ -150,4 +151,4 @@ Lombok插件
   一种图形化的用于监控基于 Spring Boot 的应用
   Spring Boot Admin 是由服务端和客户端组成
   Spring Boot Admin 提供了很多功能，如显示 name、id 和 version，显示在线状态，Loggers 的日志级别管理，Threads 线程管理，Environment 管理等。
-  
+  ...
